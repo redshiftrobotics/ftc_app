@@ -10,7 +10,7 @@ set -e
 cd "$(dirname "$0")/.."
 
 if ! (./scripts/_get_device_name.sh | grep "\-DS"); then
-	echo "ERROR: Refusing to install on non-driver station device: $name"
+	echo "ERROR: Refusing to install on non-driver station device: $(./scripts/_get_device_name.sh)!"
 	exit 1
 fi
 
